@@ -97,7 +97,7 @@ class ViT_MultiTask(nn.Module):
 class ViT_FuseMultiTask(nn.Module):
     def __init__(self, args):
         super(ViT_FuseMultiTask, self).__init__()
-        sharedDepth = 10
+        sharedDepth = 2
         if "384" in args.model:
             VitModel = ViTForImageClassification.from_pretrained(args.model_name_or_path)
         else:
